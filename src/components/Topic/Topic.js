@@ -12,7 +12,10 @@ const Topic = ({ quiz }) => {
     }
     return (
         <div className='grid grid-cols-1 my-14 lg:mx-44'>
-            <div className="card lg:card-side shadow-xl hover:shadow-2xl shadow-amber-200 hover:shadow-amber-300">
+            <div className="card lg:card-side shadow-xl hover:shadow-2xl shadow-amber-200 hover:shadow-amber-300" data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+            >
                 <figure className="p-10 border-2 border-amber-400 rounded-xl">
                     <img src={logo} alt={name} className="rounded-xl  bg-gray-800 w-80" />
                 </figure>
