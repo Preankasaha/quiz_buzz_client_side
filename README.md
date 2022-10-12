@@ -1,3 +1,42 @@
+
+# Project Title
+
+Quiz Buzz
+
+
+## Project Description
+
+This project will serve as an online quiz testing application. It's an react app. React router dom is used for availing dynamic routing facilities bestowed by the react library. Applications that are installed in creating this projects at a glance---
+
+    1. npx create-react-app
+    2. npm i react-router-dom is installed. 
+    3. npm i react-toastify is installed. 
+    4. npm i sweetalert2 is used.
+    5. npm install aos is used
+    6. npm install @heroicons/react
+    7. npm install recharts  
+
+
+### Livesite Link
+
+https://bejewelled-croquembouche-10ec02.netlify.app/
+
+
+## Deployment
+
+The project is deployed at app.netlify.com. build file is made before deploying.
+  
+  npm run build
+
+To avoid netlify 404 page not found, _redirects file containing
+
+/* /index.html 200
+
+is created.
+
+
+---------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
