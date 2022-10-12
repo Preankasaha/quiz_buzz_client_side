@@ -8,6 +8,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import { dataLoader } from './Loader/Loader';
 import Main from './Main';
 import Blog from './components/Blog/Blog';
+import { LoaderWithParams } from './Loader/LoaderWithParams';
 
 function App() {
   const router = createBrowserRouter([
@@ -33,11 +34,7 @@ function App() {
         {
 
           path: '/quiz/:quizId',
-          loader: async ({ params }) => {
-            // console.log(params.quizId)
-            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
-
-          },
+          loader: LoaderWithParams,
           element: <QuizDetails></QuizDetails>
         },
         {
