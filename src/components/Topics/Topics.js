@@ -4,7 +4,7 @@ import Topic from '../Topic/Topic';
 
 const Topics = () => {
     const quizes = useLoaderData();
-    console.log(quizes.data)
+
     return (
         <div>
             {

@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 
 const Quiz = ({ quiz, index }) => {
     const { options, id, correctAnswer } = quiz;
-    console.log(correctAnswer);
+
     const handleResult = (opt) => {
         let correctAns = options.find(option => opt === correctAnswer);
 
@@ -20,8 +20,8 @@ const Quiz = ({ quiz, index }) => {
     }
 
     const viewCorrectAnswer = (id) => {
-        // console.log(id, correctAnswer);
-        Swal.fire(correctAnswer)
+
+        Swal.fire(`Correct answer is:`, correctAnswer)
 
     }
     return (
@@ -32,11 +32,20 @@ const Quiz = ({ quiz, index }) => {
 
                     <div className='border-4 border-amber-400 rounded-xl w-80 py-18'>
 
-                        <div className='flex'><div className='text-2xl'>Q:{index}</div> <div className='text-2xl' dangerouslySetInnerHTML={{ __html: quiz["question"] }}></div> </div>
+                        <div className='flex text-blue-800'>
+                            <div className='text-2xl'>Q{index + 1}.
+                            </div>
+                            <div className='text-2xl' dangerouslySetInnerHTML={{ __html: quiz["question"] }}></div> </div>
 
                         {
-                            options.map(option => <div className='flex flex-wrap bg-amber-400 rounded w-76 py-2 my-4'><input onClick={() => handleResult(option)} type="radio" name={id} className="radio" /><p>{option}</p>
+                            options.map(option => <div className='flex flex-wrap bg-amber-400 text-xl text-blue-800 rounded w-76 py-2 my-4'>
+                                <input onClick={() => handleResult(option)} type="radio" name={id} className="radio bg-blue-600" />
+                                <p className='ml-1'>
+                                    {option}
+                                </p>
+
                                 <ToastContainer />
+
                             </div>)
                         }
                     </div>
