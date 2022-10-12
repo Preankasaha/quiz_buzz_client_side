@@ -39,7 +39,9 @@ const Quiz = ({ quiz, index }) => {
 
                         {
                             options.map(option => <div className='flex flex-wrap bg-amber-400 text-xl text-blue-800 rounded w-76 py-2 my-4'>
+
                                 <input onClick={() => handleResult(option)} type="radio" name={id} className="radio bg-blue-600" />
+
                                 <p className='ml-1'>
                                     {option}
                                 </p>

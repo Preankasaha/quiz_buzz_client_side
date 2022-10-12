@@ -15,7 +15,7 @@ function App() {
     {
       path: '/',
       element: <Main></Main>,
-
+      errorElement: <ErrorPage />,
       children: [
         {
           path: '/',
@@ -50,10 +50,7 @@ function App() {
           element: <Blog></Blog>
 
         },
-        {
-          path: "*",
-          element: <ErrorPage></ErrorPage>
-        }
+
       ]
     }
   ]);
