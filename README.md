@@ -6,15 +6,9 @@ Quiz Buzz
 
 ## Project Description
 
-This project will serve as an online quiz testing application. It's an react app. React router dom is used for availing dynamic routing facilities bestowed by the react library. Applications that are installed in creating this projects at a glance---
+This project will serve as an online quiz testing application. React app is used for this project. React router dom is used for availing dynamic routing facilities bestowed by the react library.Basically, React, react router dom, tailwindcss and daisyUI are used for the project. Along with these, packages like react-toastify, sweetaler2, aos are used to failate the the users' interaction.
 
-    1. npx create-react-app
-    2. npm i react-router-dom is installed. 
-    3. npm i react-toastify is installed. 
-    4. npm i sweetalert2 is used.
-    5. npm install aos is used
-    6. npm install @heroicons/react
-    7. npm install recharts  
+The testing process is designed by MCQ style. There are 3/4 options againt each question. Selection of right option will pop up react-toastify declaring answer is correct and selection of incorrect answer wil disclose a toast declaring the answer is wrong. The facility of knowing the correct answer immediately after the user fails to select the right option is also available. User can click the eyeicon just next to the question. An alert will open stating the correct ans against each question.    
 
 
 ### Livesite Link
@@ -22,9 +16,9 @@ This project will serve as an online quiz testing application. It's an react app
 https://bejewelled-croquembouche-10ec02.netlify.app/
 
 
-## Deployment
+#### Deployment
 
-The project is deployed at app.netlify.com. build file is made before deploying.
+The project is deployed at app.netlify.com. build file is made before deploying using 
   
   npm run build
 
