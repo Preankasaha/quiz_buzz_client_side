@@ -2,7 +2,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home';
 import QuizDetails from './components/QuizDetails/QuizDetails';
+import Statistics from './components/Statistics/Statistics';
 import Topics from './components/Topics/Topics';
+import { dataLoader } from './Loader/Loader';
 
 import Main from './Main';
 
@@ -34,6 +36,11 @@ function App() {
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
           },
           element: <QuizDetails></QuizDetails>
+        },
+        {
+          path: '/statistics',
+          loader: dataLoader,
+          element: <Statistics></Statistics>
         },
         {
           path: "*",
