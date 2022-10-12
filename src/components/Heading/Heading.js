@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Heading = () => {
+
     return (
         <div className='flex w-100% gap-x-48 justify-center items-center  text-blue-800 my-8 bg-amber-400 p-3.5'>
             <div className="info-container font-semibold lg:text-3xl" data-aos="fade-left"

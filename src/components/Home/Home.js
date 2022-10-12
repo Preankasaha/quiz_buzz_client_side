@@ -1,8 +1,12 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import Heading from '../Heading/Heading';
-import Topics from '../Topics/Topics';
+import Topic from '../Topic/Topic';
+// import Topics from '../Topics/Topics';
+
 
 const Home = () => {
+    const quizes = useLoaderData();
     return (
         <div>
             <div>
@@ -10,7 +14,13 @@ const Home = () => {
                     <Heading></Heading>
                 </div>
                 <div className="topics-container">
-                    <Topics></Topics>
+
+                    {
+                        quizes.data.map(quiz => <Topic key={quiz.id}
+                            quiz={quiz}></Topic>)
+
+                    }
+
                 </div>
             </div>
         </div>
