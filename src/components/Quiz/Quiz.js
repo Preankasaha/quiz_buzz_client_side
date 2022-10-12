@@ -2,10 +2,10 @@ import React from 'react';
 import { EyeIcon } from '@heroicons/react/24/solid'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Swal from 'sweetalert2';
 
 const Quiz = ({ quiz, index }) => {
-    const { question, options, id, correctAnswer } = quiz;
+    const { options, id, correctAnswer } = quiz;
     console.log(correctAnswer);
     const handleResult = (opt) => {
         let correctAns = options.find(option => opt === correctAnswer);
@@ -18,7 +18,12 @@ const Quiz = ({ quiz, index }) => {
         }
 
     }
-    
+
+    const viewCorrectAnswer = (id) => {
+        // console.log(id, correctAnswer);
+        Swal.fire(correctAnswer)
+
+    }
     return (
         <div>
             <div className='grid grid-cols-1 mx-10 lg:mx-96 lg:p-16'>
@@ -36,7 +41,7 @@ const Quiz = ({ quiz, index }) => {
                         }
                     </div>
                     <div>
-                        <EyeIcon className="h-6 w-6 text-amber-500" />
+                        <EyeIcon onClick={() => viewCorrectAnswer(id)} className="h-6 w-6 text-amber-500" />
 
                     </div>
                 </div>
