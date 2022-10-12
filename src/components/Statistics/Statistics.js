@@ -3,8 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import { useLoaderData } from 'react-router-dom';
 const Statistics = () => {
     const topics = useLoaderData().data;
-    console.log(topics);
-    const { name, total } = topics;
+
     return (
         <div>
             <ResponsiveContainer height={400}>
