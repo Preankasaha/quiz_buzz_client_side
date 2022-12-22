@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Heading from '../Heading/Heading';
 import Topic from '../Topic/Topic';
@@ -6,6 +7,7 @@ import Topic from '../Topic/Topic';
 
 
 const Home = () => {
+    // const [isLoading, setIsLoading] = useState(false);
     const quizes = useLoaderData();
     return (
         <div>
@@ -13,7 +15,11 @@ const Home = () => {
                 <div>
                     <Heading></Heading>
                 </div>
+                {/* {
+                    isLoading ? <progress className="progress w-56"></progress>
+                        : */}
                 <div className="topics-container">
+
 
                     {
                         quizes.data.map(quiz => <Topic key={quiz.id}
@@ -22,6 +28,8 @@ const Home = () => {
                     }
 
                 </div>
+                {/* } */}
+
             </div>
         </div>
     );
